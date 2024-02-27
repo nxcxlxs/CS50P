@@ -10,5 +10,6 @@ while True:
         new_list = p.join(list, final_sep=",")
 
     except EOFError:
+        print()
         print(f"Adieu, adieu, to {new_list}")
         break
