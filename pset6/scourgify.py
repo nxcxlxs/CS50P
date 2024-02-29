@@ -15,9 +15,8 @@ else:
             modified_data = []
             for row in reader:
                 second, first = (row['name']).split(",")
-                house = row['house']
                 # Be aware of subtle errors, like white spaces before the first name...
-                modified_data.append([first.strip(), second, house])
+                modified_data.append([first.strip(), second, row['house']])
 
                 with open(sys.argv[2], 'w') as nt:
                     writer = csv.writer(nt)
