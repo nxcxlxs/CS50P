@@ -40,6 +40,5 @@ def convert(s):
     return f"{start_hour:02}:{start_min} to {end_hour:02}:{end_min}"
 
 
-
 if __name__ == "__main__":
     main()
