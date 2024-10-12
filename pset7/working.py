@@ -1,6 +1,8 @@
 import re
 
 
+# hour_dict = {1 : 13, 2 : 14, 3 : 15, 4 : 16, 5 : 17, 6 : 18, 7 : 19, 8 : 20, 9 : 21, 10 : 22, 11 : 23, 12 : 0}
+
 pm_dict = {
     1 : 13, 2 : 14, 3 : 15, 4 : 16, 5 : 17, 6 : 18,
     7 : 19, 8 : 20, 9 : 21, 10 : 22, 11 : 23, 12 : 12
@@ -24,6 +26,9 @@ def convert(s):
         end_hour = int(matches.group(4))
         end_min = matches.group(5) if matches.group(5) else "00"
         end_period = matches.group(6)
+
+        # start_hour = hour_conversion[start_hour] if start_period == "PM" else start_hour
+        # end_hour = hour_conversion[end_hour] if end_period == "PM" else end_hour
 
         if start_period == "PM" and start_hour in pm_dict:
             start_hour = pm_dict[start_hour]
